@@ -12,6 +12,8 @@ pfServer.use(cors())
 pfServer.use(express.json()) // so it becomes object
 // after json parsing   only use router
 pfServer.use(router)
+//image make available into browser
+pfServer.use('/Upload',express.static('./Upload'))
 
 const PORT=3000 || process.env.PORT
 
